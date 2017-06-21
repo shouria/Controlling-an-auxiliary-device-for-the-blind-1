@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="white">#fff</color>
+
+    <color name="colorBlueOrcam">#FF467FDA</color>  // There is more place with this color, like active_dot.xml
+    <color name="colorStrongLine">#c4c4c4</color>
+    <color name="colorLine">@android:color/darker_gray</color>
+    <color name="colorMenuText">#000000</color>
+</resources>
