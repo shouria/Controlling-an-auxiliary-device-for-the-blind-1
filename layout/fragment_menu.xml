@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.orcam.mymebasicapp.main.MenuFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main_menu_layout"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Cloud -->
+            <LinearLayout
+                android:id="@+id/cloud_layout"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:animateLayoutChanges="true">
+
+                <Button
+                    android:id="@+id/btn_upload_to_cloud"
+                    style="@style/buttons"
+                    android:text="@string/upload_to_cloud"
+                    android:textSize="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginRight="5dp" />
+
+                <Button
+                    android:id="@+id/btn_restore_from_cloud"
+                    style="@style/buttons"
+                    android:text="@string/restore_from_cloud"
+                    android:textSize="13dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:layout_marginLeft="5dp" />
+
+            </LinearLayout>
+
+            <!-- Menu content -->
+            <LinearLayout
+                android:id="@+id/content_menu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorBlueOrcam"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
