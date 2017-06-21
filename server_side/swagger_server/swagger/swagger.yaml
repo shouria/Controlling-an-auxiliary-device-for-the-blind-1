@@ -1,0 +1,61 @@
+---
+swagger: "2.0"
+info:
+  description: "OpenAPI Specification of OrCam MyEye App"
+  version: "1.0.0"
+  title: "OrCam MyEye App"
+host: "localhost:8080"
+schemes:
+- "https"
+paths:
+  /uploadSettings:
+    post:
+      summary: "Store user's settings"
+      operationId: "settings_post"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "settings"
+        description: "The settings to insert."
+        required: false
+        schema:
+          $ref: "#/definitions/settings"
+      responses:
+        204:
+          description: "Insert succesfully."
+        400:
+          description: "Settings couldn't have been inserted."
+      x-swagger-router-controller: "swagger_server.controllers.default_controller"
+  /restoreSettings:
+    get:
+      summary: "restore user's settings"
+      operationId: "settings_get"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "user_id"
+        in: "query"
+        required: true
+        type: "string"
+      responses:
+        204:
+          description: "Successe: found User's settings"
+        400:
+          description: "Can't find user's settings."
+      x-swagger-router-controller: "swagger_server.controllers.default_controller"
+definitions:
+  settings:
+    required:
+    - "user_id"
+    properties:
+      setting_json:
+        type: "string"
+      timestemp:
+        type: "string"
+      user_id:
+        type: "string"
